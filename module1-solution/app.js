@@ -5,26 +5,29 @@
 
   .controller('LunchCheckController',LunchCheckController);
 
-  LunchCheckController.$inject = ['$scope'];
-  function LunchCheckController($scope) {
+  LunchCheckController.$inject = ['$scope','$filter'];
+  function LunchCheckController($scope,$filter) {
     $scope.items = "";
-    $scope.text = " ";
+    $scope.text = "Please enter data first";
+    $scope.color= "#000000";
 
     $scope.count = function () {
-      $scope.text = Message(items.split(',').length);
+      var n = $scope.items.split(',').length;
+      Message(n);
     };
 
-    function Message(var n) {
-      if (n==0){
-        text = 'Please enter data first';
+    function Message(n) {
+      if ($scope.items==""){
+        $scope.text = "Please enter data first";
       }
-      else if (n<3) {
-        text = "Enjoy!";
+      else if (n<=3) {
+        $scope.text = "Enjoy!";
+        $scope.color = "#7FFF00";
       }
       else {
-        text = "Too much!";
+        $scope.text = "Too much!";
+        $scope.color = "#FF0000";
       }
-      return text;
-    };
+    }
   }
 })();

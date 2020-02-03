@@ -3,17 +3,15 @@
   <head>
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
-    <script src="angular.min(1).js"></script>
+    <script src="https://code.angularjs.org/1.7.9/angular.min.js"></script>
     <script src="app.js"></script>
   </head>
 <body>
    <div class="container" ng-controller="LunchCheckController">
      <h1>Lunch Checker</h1>
-
          <div class="form-group">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
@@ -22,9 +20,8 @@
          <div class="form-group">
              <button class="btn btn-default" ng-click="count()">Check If Too Much</button>
          </div>
-         <div class="form-group message">
-           <!-- Your message can go here. -->
-           Message: {{text}}
+         <div class="form-group message" style="color:{{color}}">
+           <u style="color:black">Message:</u> {{text}}
          </div>
    </div>
 
