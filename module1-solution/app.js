@@ -8,7 +8,7 @@
   LunchCheckController.$inject = ['$scope','$filter'];
   function LunchCheckController($scope,$filter) {
     $scope.items = "";
-    $scope.text = "Please enter data first";
+    $scope.text = " ";
     $scope.color= "#000000";
 
     $scope.count = function () {
