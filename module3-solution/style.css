@@ -1,0 +1,19 @@
+.nothing{
+  border-style:solid;
+  border-color: red;
+  font-size: 30px;
+  border-width: 5px;
+}
+.form-control{
+  font-size: 20px;
+  text-align: left;
+}
+.btn-primary{
+  font-size: 20px;
+}
+.item-list{
+  font-size: 20px;
+}
+.form-group{
+  padding: 10px;
+}
